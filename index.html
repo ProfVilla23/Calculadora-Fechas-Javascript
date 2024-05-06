@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta etiquetas para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Enlaces a fuentes externas de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    
+    <!-- Título de la página -->
+    <title>Contador Dias</title>
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Contador de Dias</h1>
+    </header>
+    
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Descripción de la página -->
+        <h2>Esta página es para contar cuántos días faltan entre dos fechas</h2>
+        <h2>Por favor ingrese la información solicitada</h2>
+        
+        <!-- Formulario para ingresar las fechas -->
+        <form>
+            <!-- Label y campo de fecha de inicio -->
+            <label for="inicio">Fecha de inicio</label>
+            <input type="date" name="inicio" id="inicio">
+            
+            <!-- Label y campo de fecha final -->
+            <label for="final">Fecha final</label>
+            <input type="date" name="final" id="final">
+            
+            <!-- Botón para calcular -->
+            <button type="button" onclick="calcularDias()">Calcular</button>
+            
+            <!-- Resultado del cálculo -->
+            <br><br>
+            <label>Resultado</label>
+            <input type="text" name="resultado" id="resultado" readonly>
+        </form>
+    </div>
+    
+    <!-- Archivo de script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
