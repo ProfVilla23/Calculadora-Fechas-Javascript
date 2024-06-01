@@ -1,54 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta etiquetas para el documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Enlace al archivo de estilos CSS externo -->
-    <link rel="stylesheet" href="estilos.css">
-    
-    <!-- Enlaces a fuentes externas de Google Fonts -->
+    <link rel="stylesheet" href="estilos1.css">
+    <title>Herramientas de Tiempo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
-    
-    <!-- Título de la página -->
-    <title>Contador Dias</title>
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
 </head>
 <body>
-    <!-- Encabezado de la página -->
     <header>
-        <h1>Contador de Dias</h1>
+        <h1>Herramientas de Tiempo</h1>
     </header>
-    
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Descripción de la página -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="mostrarSeccion('cronometro')">Cronómetro</a></li>
+            <li><a href="#" onclick="mostrarSeccion('contadorDias')">Contador de Días</a></li>
+            <li><a href="#" onclick="mostrarSeccion('reloj')">Reloj</a></li>
+            <li><a href="#" onclick="mostrarSeccion('alarma')">Alarma</a></li>
+            <li><a href="#" onclick="mostrarSeccion('temporizador')">Temporizador</a></li>
+            <li><a href="#" onclick="mostrarSeccion('calendario')">Calendario</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="cronometro" style="display: none;">
+        <h1 id="cronometroTitulo">Cronómetro</h1>
+        <h1 id="cronometroDisplay">00:00:00</h1>
+        <button id="iniciar" onclick="iniciarCronometro()">Iniciar</button>
+        <button id="pausar" onclick="pausarCronometro()">Pausar</button>
+        <button id="reiniciar" onclick="reiniciarCronometro()">Reiniciar</button>
+        <button id="vuelta" onclick="vueltaCronometro()">Vuelta</button>
+        <ol id="vueltas"></ol>
+    </div>
+    <div class="container" id="contadorDias" style="display: none;">
         <h2>Esta página es para contar cuántos días faltan entre dos fechas</h2>
         <h2>Por favor ingrese la información solicitada</h2>
-        
-        <!-- Formulario para ingresar las fechas -->
         <form>
-            <!-- Label y campo de fecha de inicio -->
             <label for="inicio">Fecha de inicio</label>
             <input type="date" name="inicio" id="inicio">
-            
-            <!-- Label y campo de fecha final -->
             <label for="final">Fecha final</label>
             <input type="date" name="final" id="final">
-            
-            <!-- Botón para calcular -->
-            <button type="button" onclick="calcularDias()">Calcular</button>
-            
-            <!-- Resultado del cálculo -->
+            <button type="button" onclick="calcularDias()" id="boton">Calcular</button>
             <br><br>
             <label>Resultado</label>
             <input type="text" name="resultado" id="resultado" readonly>
         </form>
     </div>
-    
-    <!-- Archivo de script JavaScript -->
-    <script src="script.js"></script>
+    <!-- Placeholder for additional tools -->
+    <div class="container" id="reloj" style="display: none;">
+            <h1>Reloj</h1>
+            <div id="horaUsuario">
+                <h2>Hora actual del usuario</h2>
+                <h1 id="relojDisplay">Hora exacta</h1>
+                <p id="fechaDisplay">Fecha actual</p>
+            </div>
+            </div>
+        
+            <div class="container" id="alarma" style="display: none;">
+                <h1>Alarma</h1>
+                <form id="alarmaForm">
+                    <label for="horaAlarma">Hora de la alarma:</label>
+                    <input type="time" id="horaAlarma" required>
+                    <button type="button" onclick="establecerAlarma()">Establecer Alarma</button>
+                </form>
+                <div id="mensajeAlarma" style="display: none;">
+                    <h2>¡Alarma activada!</h2>
+                </div>
+                <audio id="alarmaAudio" src="prueba.mp3" preload="auto"></audio> <!-- Ruta al archivo de audio -->
+            </div>
+    <div class="container" id="temporizador" style="display: none;">
+        <h1>Temporizador</h1>
+        <!-- Content for the timer tool -->
+    </div>
+    <div class="container" id="calendario" style="display: none;">
+        <h1>Calendario</h1>
+        <!-- Content for the calendar tool -->
+    </div>
+    <script src="script1.js"></script>
 </body>
 </html>
