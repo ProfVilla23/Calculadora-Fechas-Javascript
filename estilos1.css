@@ -1,0 +1,261 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #15212a, #1a2b2b);
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Sedan SC', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+ 
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #1a2b2b;
+      /* Ajusta este valor según tus necesidades */
+      margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+nav ul li{
+    margin-top: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#cronometro {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'DS-Digital', sans-serif;
+    text-align: center;
+}
+
+#cronometroDisplay {
+    font-size: 12em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+li {
+    font-size: 5em;
+    margin-left: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto;
+    display: inline-block;
+    width: 150px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+#contadorDias{
+    max-width: 400px; /* ajusta este valor según tus necesidades */
+    width: 100%;
+    margin: 0 auto; /* centrar el contenedor horizontalmente */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* añade opacidad al fondo del formulario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* añade sombra al formulario */
+}
+form {
+    margin-top: 20px;
+}
+label {
+    display: block; /* Hacer que los labels ocupen una línea completa */
+    font-size: 18px; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio inferior entre los labels y los elementos siguientes */
+}
+
+/* Estilos para los inputs de fecha de inicio y fecha final */
+input[type="date"], input[type="text"] {
+    padding: 5px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente más grande */
+    border-radius: 5px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde delgado */
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
+    margin-bottom: 10px; /* Espacio inferior entre los inputs y los elementos siguientes */
+}
+
+#boton{
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Hacer que el botón sea un bloque para que ocupe todo el ancho disponible */
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+    #cronometroDisplay {
+        font-size: 10em;
+    }
+    li {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 992px) {
+    #cronometroDisplay {
+        font-size: 8em;
+    }
+    li {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
+    #cronometroDisplay {
+        font-size: 6em;
+    }
+    li {
+        font-size: 2em;
+    }
+    button {
+        width: 120px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        font-size: 1.2em;
+    }
+    #cronometroDisplay {
+        font-size: 4em;
+    }
+    li {
+        font-size: 1.5em;
+    }
+    button {
+        width: 100px;
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+#reloj{
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'DS-Digital', sans-serif;
+    text-align: center;
+
+}
+#relojDisplay{
+    font-size: 12em;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: white;
+}
+
+#fechaDisplay{
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: white;
+}
+
+#alarma {
+    max-width: 400px; /* ajusta este valor según tus necesidades */
+    width: 100%;
+    margin: 0 auto; /* centrar el contenedor horizontalmente */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* añade opacidad al fondo del formulario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* añade sombra al formulario */
+    text-align: center;
+}
+
+#alarmaForm label, #alarmaForm input, #alarmaForm button {
+    display: block;
+    margin: 10px auto;
+}
+
+#alarmaForm input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+#alarmaForm button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+#alarmaForm button:hover {
+    background-color: #45a049;
+}
+
+#alarmaForm button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#mensajeAlarma {
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+}
